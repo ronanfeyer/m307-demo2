@@ -22,7 +22,7 @@ app.post("/create_post", upload.single("image"), async function (req, res) {
   /*const user = await login.loggedInUser(req);*/
   "INSERT INTO posts (caption, image) VALUES ($1, $2)",
     [req.body.caption, req.file.filename];
-  /*console.log(result);*/
+  console.log(result);
   res.redirect("/");
 });
 

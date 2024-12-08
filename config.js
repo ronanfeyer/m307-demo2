@@ -75,16 +75,16 @@ export function createApp(dbconfig) {
   });
 
   /*new Post*/
-
+  /*
   app.get("/posts", function (req, res) {
     res.render("posts");
   });
-
-  app.post("/post", upload.single("image"), async function (req, res) {
-    await pool.query(
-      "INSERT INTO posts (title, description, image) VALUES ($1, $2, $3)",
-      [req.body.title, req.body.description, req.file.filename]
-    );
+*/
+  app.post("/posts", upload.single("image"), async function (req, res) {
+    await pool.query("INSERT INTO posts (description, image) VALUES ($1, $2)", [
+      req.body.description,
+      req.file.filename,
+    ]);
     res.redirect("/");
   });
 
