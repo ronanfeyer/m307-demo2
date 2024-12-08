@@ -5,21 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML5 Boilerplate</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <header>
-      <a href="/">Home</a>
-      <a href="/news">News</a>
-      <a href="/login">Login</a>
-      <a href="/register">Register</a>
-      <a href="/new_post">New Post</a>
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/">🍴 Foody</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/new_post">New Post</a></li>
+        </ul>
+      </nav>
     </header>
 
     {{{body}}}
 
-    <footer>
-      <a href="/impressum">Impressum</a>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <ul class="footer-links">
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/privacy">Datenschutz</a></li>
+          <li><a href="/terms">AGB</a></li>
+        </ul>
+        <p>&copy; 2024 Foody. Alle Rechte vorbehalten.</p>
+      </div>
     </footer>
   </body>
 
